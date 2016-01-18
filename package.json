@@ -1,0 +1,24 @@
+{
+  "name": "laere",
+  "version": "1.0.0",
+  "description": "<h1>Portfolio Website</h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "browser-sync start --server --files=\"css/*.css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laere/Portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laere/Portfolio/issues"
+  },
+  "homepage": "https://github.com/laere/Portfolio#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.0",
+    "node-sass": "^3.4.2"
+  }
+}

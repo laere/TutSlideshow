@@ -541,7 +541,8 @@ div {
 
 #container {
   margin: 10em auto;
-  background-color: #444;
+  background-color: #fff;
+  border: 1px solid black;
   max-width: 60%;
   height: 500px;
   position: relative; }
@@ -549,23 +550,23 @@ div {
 .arrow {
   width: 0;
   height: 0;
-  border-top: 60px solid transparent;
-  border-bottom: 60px solid transparent; }
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid transparent; }
 
 #leftArrow {
-  border-right: 50px solid green;
+  border-right: 50px solid rgba(82, 189, 40, 0.9);
   float: left;
   position: absolute;
   margin-top: -50px;
-  top: 50%;
-  right: 100%; }
+  top: 20%;
+  right: 105%; }
 
 #rightArrow {
-  border-left: 50px solid green;
+  border-left: 50px solid rgba(82, 189, 40, 0.9);
   float: right;
   position: absolute;
   margin-top: -50px;
-  top: 50%;
-  left: 100%; }
+  top: 20%;
+  left: 105%; }
 
 /*# sourceMappingURL=main.css.map */
