@@ -2,4 +2,72 @@
 @import 'bourbon/bourbon';
 @import 'base/base';
 @import '_normalize';
-@import 'bootstrap';
+
+
+//////////VARIABLES///////////////////
+
+
+
+//////////MIXINS///////////////////
+@mixin flex-row() {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin arrow() {
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+}
+
+@mixin vertCenter() {
+  position: absolute;
+  margin-top: -50px;
+  top: 50%;
+}
+//////////BASE STYLES///////////////////
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+}
+
+
+//////////ELEMENT STYLES///////////////////
+#container {
+  margin: 10em auto;
+  background-color: #444;
+  max-width: 60%;
+  height: 500px;
+  position: relative;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.arrow {
+@include arrow;
+}
+
+#leftArrow {
+  border-right: 50px solid green;
+  float: left;
+  @include vertCenter;
+  right: 100%;
+}
+
+#rightArrow {
+  border-left: 50px solid green;
+  float: right;
+  @include vertCenter;
+  left: 100%;
+}
