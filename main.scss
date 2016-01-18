@@ -3,18 +3,7 @@
 @import 'base/base';
 @import '_normalize';
 
-
-//////////VARIABLES///////////////////
-
-
-
 //////////MIXINS///////////////////
-@mixin flex-row() {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
 
 @mixin arrow() {
   width: 0;
@@ -93,6 +82,10 @@ div {
     position: absolute;
     bottom: 8%;
     left: 15%;
+    &::first-letter {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
   }
   #image {
     max-width: 100%;
