@@ -32,10 +32,15 @@
 //////////BASE STYLES///////////////////
 html {
   box-sizing: border-box;
+
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
 div {
@@ -51,7 +56,18 @@ div {
   max-width: 60%;
   height: 500px;
   position: relative;
-  box-shadow: 1px 1px 5px #777;
+  &:hover {
+    animation: boxShadow 0.5s ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes boxShadow {
+  50% {
+    box-shadow: 1px 1px 3px #777;
+  }
+  100% {
+    box-shadow: 1px 1px 6px #777;
+  }
+}
   .arrow {
     @include arrow;
   }
@@ -85,7 +101,6 @@ div {
     display: block;
     margin: 40px auto;;
     cursor: pointer;
-    box-shadow: 1px 1px 10px #777;
     &:hover {
       animation: grow 0.5s ease-out;
       animation-fill-mode: forwards;
@@ -93,9 +108,11 @@ div {
     @keyframes grow {
       50% {
         transform: scale(1.05);
+        box-shadow: 1px 1px 3px #777;
       }
       100% {
         transform: scale(1.10);
+        box-shadow: 1px 1px 6px #777;
       }
     }
   }

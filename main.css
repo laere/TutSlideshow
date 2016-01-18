@@ -536,6 +536,9 @@ html {
 *, *:before, *:after {
   box-sizing: border-box; }
 
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+
 div {
   display: block; }
 
@@ -545,8 +548,15 @@ div {
   border: 1px solid #777;
   max-width: 60%;
   height: 500px;
-  position: relative;
-  box-shadow: 1px 1px 5px #777; }
+  position: relative; }
+  #container:hover {
+    animation: boxShadow 0.5s ease-out;
+    animation-fill-mode: forwards; }
+@keyframes boxShadow {
+  50% {
+    box-shadow: 1px 1px 3px #777; }
+  100% {
+    box-shadow: 1px 1px 6px #777; } }
   #container .arrow {
     width: 0;
     height: 0;
@@ -580,15 +590,16 @@ div {
     width: 600px;
     display: block;
     margin: 40px auto;
-    cursor: pointer;
-    box-shadow: 1px 1px 10px #777; }
+    cursor: pointer; }
     #container #image:hover {
       animation: grow 0.5s ease-out;
       animation-fill-mode: forwards; }
 @keyframes grow {
   50% {
-    transform: scale(1.05); }
+    transform: scale(1.05);
+    box-shadow: 1px 1px 3px #777; }
   100% {
-    transform: scale(1.1); } }
+    transform: scale(1.1);
+    box-shadow: 1px 1px 6px #777; } }
 
 /*# sourceMappingURL=main.css.map */
