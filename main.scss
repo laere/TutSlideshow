@@ -21,6 +21,7 @@
   height: 0;
   border-top: 200px solid transparent;
   border-bottom: 200px solid transparent;
+  cursor: pointer;
 }
 
 @mixin vertical-center() {
@@ -46,29 +47,56 @@ div {
 #container {
   margin: 10em auto;
   background-color: #fff;
-  border: 1px solid black;
+  border: 1px solid #777;
   max-width: 60%;
   height: 500px;
   position: relative;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-}
+  box-shadow: 1px 1px 5px #777;
+  .arrow {
+    @include arrow;
+  }
 
-.arrow {
-@include arrow;
-}
+  #leftArrow {
+    border-right: 50px solid rgba(82,189,40, .9);
+    float: left;
+    @include vertical-center;
+    right: 105%;
+  }
 
-#leftArrow {
-  border-right: 50px solid rgba(82,189,40, .9);
-  float: left;
-  @include vertical-center;
-  right: 105%;
-}
-
-#rightArrow {
-  border-left: 50px solid rgba(82,189,40, .9);
-  float: right;
-  @include vertical-center;
-  left: 105%;
+  #rightArrow {
+    border-left: 50px solid rgba(82,189,40, .9);
+    float: right;
+    @include vertical-center;
+    left: 105%;
+  }
+  #text {
+    font-size: 1.25em;
+    width: 70%;
+    text-align: center;
+    //background-color: red;
+    position: absolute;
+    bottom: 8%;
+    left: 15%;
+  }
+  #image {
+    max-width: 100%;
+    height: 250px;
+    width: 600px;
+    display: block;
+    margin: 40px auto;;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #777;
+    &:hover {
+      animation: grow 0.5s ease-out;
+      animation-fill-mode: forwards;
+    }
+    @keyframes grow {
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1.10);
+      }
+    }
+  }
 }
