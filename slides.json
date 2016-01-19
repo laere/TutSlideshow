@@ -1,0 +1,29 @@
+
+var slides = [{
+	"img": "src",
+	"text": "1. Sign up on Digital ocean and create an ubuntu droplet."
+}, {
+	"img": "src",
+	"text": "2. Go to www.namecheap.com and purchase a domain name of your choice."
+}, {
+	"img": "src",
+	"text": "3. Point your purchased domain name to the three digital ocean nameservers: ns1.digitalocean.com(ns2,ns3)."
+}, {
+	"img": "src",
+	"text": "4. Go to your created digital ocean droplet and create an A name document."
+}, {
+	"img": "src",
+	"text": "5. Set the host name of your A document to 'www', and set the IP to your droplet IP."
+}, {
+	"img": "src",
+	"text": "6. Download an SFTP client such as Filezilla."
+}, {
+	"img": "src",
+	"text": "7. Log into your droplet server with username: root and your password."
+}, {
+	"img": "src",
+	"text": "8. Log into your server directory via filezilla."
+}, {
+	"img": "src",
+	"text": "9. Find the /var/www/ folder and create a folder with your purchased domain name mydomain.com."
+}]
