@@ -537,18 +537,20 @@ html {
   box-sizing: border-box; }
 
 body {
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  background-color: #247BA0; }
 
 div {
   display: block; }
 
 #container {
-  margin: 10em auto;
+  margin: 14em auto;
   background-color: #fff;
   border: 1px solid #777;
   max-width: 60%;
   height: 500px;
-  position: relative; }
+  position: relative;
+  box-shadow: 1px 1px 6px #195873; }
   #container .arrow {
     width: 0;
     height: 0;
@@ -556,19 +558,25 @@ div {
     border-bottom: 200px solid transparent;
     cursor: pointer; }
   #container #leftArrow {
-    border-right: 50px solid rgba(82, 189, 40, 0.9);
+    border-right: 50px solid #70C1B3;
     float: left;
     position: absolute;
     margin-top: -50px;
     top: 20%;
-    right: 105%; }
+    right: 105%;
+    box-shadow: 6px 0px 6px -3px #3E6B64; }
+    #container #leftArrow:hover {
+      border-right-color: #64ADA1; }
   #container #rightArrow {
-    border-left: 50px solid rgba(82, 189, 40, 0.9);
+    border-left: 50px solid #70C1B3;
     float: right;
     position: absolute;
     margin-top: -50px;
     top: 20%;
-    left: 105%; }
+    left: 105%;
+    box-shadow: -3px 0px 8px 0px #3E6B64; }
+    #container #rightArrow:hover {
+      border-left-color: #64ADA1; }
   #container #text {
     font-size: 1.25em;
     width: 70%;
