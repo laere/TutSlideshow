@@ -549,14 +549,6 @@ div {
   max-width: 60%;
   height: 500px;
   position: relative; }
-  #container:hover {
-    animation: boxShadow 0.5s ease-out;
-    animation-fill-mode: forwards; }
-@keyframes boxShadow {
-  50% {
-    box-shadow: 1px 1px 3px #777; }
-  100% {
-    box-shadow: 1px 1px 6px #777; } }
   #container .arrow {
     width: 0;
     height: 0;
@@ -584,10 +576,13 @@ div {
     position: absolute;
     bottom: 8%;
     left: 15%; }
+    #container #text::first-letter {
+      font-size: 1.5em;
+      font-weight: bold; }
   #container #image {
     max-width: 100%;
-    height: 250px;
-    width: 600px;
+    height: 320px;
+    width: 700px;
     display: block;
     margin: 40px auto;
     cursor: pointer; }
