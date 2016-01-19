@@ -1,14 +1,8 @@
 window.onload = function() {
-  //function calls (hoisting)
-
-
   var currentSlidePosition = 0;
   var currentImagePosition = 0;
   var slideText = document.querySelector('#text');
   var slideImage = document.querySelector('#image');
-  var rightArrow = document.querySelector('#rightArrow');
-  var leftArrow = document.querySelector('#leftArrow');
-
   var slides = [
     '1. Sign up on Digital ocean and create an ubuntu droplet.',
     '2. Go to www.namecheap.com and purchase a domain name of your choice.',
@@ -20,7 +14,6 @@ window.onload = function() {
     '8. Log into your server directory via filezilla.',
     '9. Find the /var/www/ folder and create a folder with your purchased domain name (mydomain.com).'
   ];
-
   var images = [
     'http://lorempixel.com/image_output/abstract-q-c-600-250-10.jpg',
     'http://lorempixel.com/image_output/animals-q-c-600-250-10.jpg',
@@ -32,6 +25,10 @@ window.onload = function() {
     'http://lorempixel.com/image_output/fashion-q-c-600-250-5.jpg',
     'http://lorempixel.com/image_output/people-q-c-600-250-7.jpg'
   ];
+  console.log('Slide length: ' + slides.length);
+  console.log('Images length: ' + images.length);
+  console.log('Slide position: ' + currentSlidePosition);
+  console.log('Image position: ' + currentImagePosition);
   addFirstSlide();
   addFirstImage();
   //add first slide
@@ -48,14 +45,26 @@ window.onload = function() {
   function showImage(image) {
     slideImage.setAttribute('src', image);
   }
+  function validateNextSlide() {
+    return currentSlidePosition < slides.length - 1 && currentImagePosition < images.length - 1;
+  }
+  function validatePrevSlide() {
+    return currentSlidePosition <= slides.length && currentImagePosition <= images.length;
+  }
+
   //create a function that goes forward through the array content in intervals
   //bind the function to an event listener conditional
   //better way of writing this?
   function clickToNextSlide() {
     console.log('Slide length: ' + slides.length);
-    if (currentSlidePosition < slides.length - 1 && currentImagePosition < images.length - 1) {
+    console.log('Images length: ' + images.length);
+    //if validate function is true.
+    if (validateNextSlide) {
       currentSlidePosition++;
       currentImagePosition++;
+      if (currentImagePosition >= slides.length  && currentImagePosition >= images.length) {
+        return;
+      }
       showSlide(slides[currentSlidePosition]);
       showImage(images[currentImagePosition]);
       console.log('Slide position: ' + currentSlidePosition);
@@ -66,7 +75,9 @@ window.onload = function() {
   //better way of writing this?
   function clickToPreviousSlide() {
     console.log('Slide length: ' + slides.length);
-    if (currentSlidePosition <= slides.length && currentImagePosition <= images.length) {
+    console.log('Images length: ' + images.length);
+    //if validate function is true.
+    if (validatePrevSlide) {
       currentSlidePosition--;
       currentImagePosition--;
       console.log('Slide position: ' + currentSlidePosition);
@@ -82,6 +93,8 @@ window.onload = function() {
   }
   //attach event listeners to the document and create a conditional.
   document.querySelector('html').addEventListener('click', function(event) {
+    var rightArrow = document.querySelector('#rightArrow');
+    var leftArrow = document.querySelector('#leftArrow');
     var el = event.target;
     //if right arrow is clicked
     if (el === rightArrow) {
