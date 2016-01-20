@@ -4,7 +4,7 @@ window.onload = function() {
   var slideText = document.querySelector('#text');
   var slideImage = document.querySelector('#image');
       slideImage.setAttribute('width', '450px');
-      // slideImage.setAttribute('height', '190px');
+  // slideImage.setAttribute('height', '190px');
   var slides = [
     '1. Sign up on Digital ocean and create an ubuntu droplet.',
     '2. Go to www.namecheap.com and purchase a domain name of your choice.',
@@ -27,14 +27,18 @@ window.onload = function() {
     'http://i.istockimg.com/file_thumbview_approve/74072609/6/stock-photo-74072609-pink-food-truck.jpg',
     'http://i.istockimg.com/file_thumbview_approve/70610003/6/stock-photo-70610003-birthday-toast.jpg'
   ];
+
   console.log('Slide length: ' + slides.length);
   console.log('Images length: ' + images.length);
   console.log('Slide position: ' + currentSlidePosition);
   console.log('Image position: ' + currentImagePosition);
+
   addFirstSlide();
   addFirstImage();
-
-
+  //for each item in the array create and Orb
+  slides.forEach(function(func) {
+    createOrbs('div', '50px', '50px', '#fff', '30px', 'inline-block');
+  });
   //add first slide
   function addFirstSlide() {
     slideText.innerHTML = slides[0];
@@ -96,6 +100,20 @@ window.onload = function() {
       console.log('Image position: ' + currentImagePosition);
     }
   }
+
+  function createOrbs(ele, height, width, color, radius, display) {
+    var orbs = document.querySelector('#orbs'),
+        //textNode = document.createTextNode(),
+        element = document.createElement(ele);
+    element.style.height = height;
+    element.style.width = width;
+    element.style.backgroundColor = color;
+    element.style.borderRadius = radius;
+    element.style.display = display;
+    //element.appendChild(textNode);
+    orbs.appendChild(element);
+  }
+
   //attach event listeners to the document and create a conditional.
   document.querySelector('html').addEventListener('click', function(event) {
     var rightArrow = document.querySelector('#rightArrow');
