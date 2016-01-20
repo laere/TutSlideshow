@@ -22,6 +22,13 @@ $light-green: #70C1B3;
   margin-top: -50px;
   top: 20%;
 }
+
+@mixin flex-row() {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 //////////BASE STYLES///////////////////
 html {
   box-sizing: border-box;
@@ -42,9 +49,31 @@ div {
 }
 
 
-//////////ELEMENT STYLES///////////////////
+//////////HEADER STYLES///////////////////
+header {
+  @include flex-row;
+  justify-content: space-around;
+  color: #fff;
+  background-color: #FF1654;
+  opacity: .8;
+  height: 5em;
+    #logo {
+      font-size: 2.5em;
+    }
+    .navbar ul li {
+      display: inline-block;
+      padding: 0 10px;
+      font-size: 1.25em;
+      &:hover {
+        font-weight: bold;
+        opacity: .9;
+      }
+    }
+}
+
+//////////CONTAINER STYLES///////////////////
 #container {
-  margin: 14em auto;
+  margin: 13em auto;
   background-color: #fff;
   border: 1px solid #777;
   max-width: 60%;
@@ -60,7 +89,7 @@ div {
     float: left;
     @include vertical-center;
     right: 105%;
-    box-shadow: 6px 0px 6px -3px #3E6B64;
+    box-shadow: 6px 0px 6px -4px #5A9B90;
     &:hover {
       border-right-color: #64ADA1;
     }
@@ -71,7 +100,7 @@ div {
     float: right;
     @include vertical-center;
     left: 105%;
-    box-shadow: -6px 0px 6px -3px #3E6B64;
+    box-shadow: -6px 0px 6px -4px #5A9B90;
     &:hover {
       border-left-color: #64ADA1;
     }
@@ -95,6 +124,7 @@ div {
     display: block;
     margin: 40px auto;;
     cursor: pointer;
+    border: 1px solid #888;
     &:hover {
       animation: grow 0.5s ease-out;
       animation-fill-mode: forwards;
@@ -111,3 +141,5 @@ div {
     }
   }
 }
+
+//////////FOOTER STYLES///////////////////

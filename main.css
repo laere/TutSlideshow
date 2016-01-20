@@ -543,8 +543,28 @@ body {
 div {
   display: block; }
 
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  justify-content: space-around;
+  color: #fff;
+  background-color: #FF1654;
+  opacity: .8;
+  height: 5em; }
+  header #logo {
+    font-size: 2.5em; }
+  header .navbar ul li {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 1.25em; }
+    header .navbar ul li:hover {
+      font-weight: bold;
+      opacity: .9; }
+
 #container {
-  margin: 14em auto;
+  margin: 13em auto;
   background-color: #fff;
   border: 1px solid #777;
   max-width: 60%;
@@ -564,7 +584,7 @@ div {
     margin-top: -50px;
     top: 20%;
     right: 105%;
-    box-shadow: 6px 0px 6px -3px #3E6B64; }
+    box-shadow: 6px 0px 6px -4px #5A9B90; }
     #container #leftArrow:hover {
       border-right-color: #64ADA1; }
   #container #rightArrow {
@@ -574,7 +594,7 @@ div {
     margin-top: -50px;
     top: 20%;
     left: 105%;
-    box-shadow: -6px 0px 6px -3px #3E6B64; }
+    box-shadow: -6px 0px 6px -4px #5A9B90; }
     #container #rightArrow:hover {
       border-left-color: #64ADA1; }
   #container #text {
@@ -593,7 +613,8 @@ div {
     width: 700px;
     display: block;
     margin: 40px auto;
-    cursor: pointer; }
+    cursor: pointer;
+    border: 1px solid #888; }
     #container #image:hover {
       animation: grow 0.5s ease-out;
       animation-fill-mode: forwards; }

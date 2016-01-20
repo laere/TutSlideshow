@@ -51,7 +51,6 @@ window.onload = function() {
   function validatePrevSlide() {
     return currentSlidePosition <= slides.length && currentImagePosition <= images.length;
   }
-
   //create a function that goes forward through the array content in intervals
   //bind the function to an event listener conditional
   //better way of writing this?
