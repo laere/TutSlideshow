@@ -17,3 +17,5 @@ Collect the images needed for each slide
 
 Get image sliding working. **DONE**
 
+Add header and footer to fill the page.
+
