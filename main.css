@@ -567,6 +567,8 @@ header {
     header .navbar ul li:hover {
       font-weight: bold;
       opacity: .9; }
+    header .navbar ul li a {
+      color: white; }
 
 #container {
   margin: 6.5em auto;
@@ -635,6 +637,7 @@ footer {
   text-align: center;
   color: white;
   padding: 5px 0;
-  border-top: 5px solid #E5134B; }
+  border-top: 5px solid #E5134B;
+  font-size: 1.2em; }
 
 /*# sourceMappingURL=main.css.map */
