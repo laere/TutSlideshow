@@ -66,7 +66,8 @@ window.onload = function() {
       currentSlidePosition++;
       currentImagePosition++;
       if (currentImagePosition >= slides.length  && currentImagePosition >= images.length) {
-        return;
+        currentImagePosition = 8;
+        currentSlidePosition = 8;
       }
       showSlide(slides[currentSlidePosition]);
       showImage(images[currentImagePosition]);
@@ -86,7 +87,8 @@ window.onload = function() {
       console.log('Slide position: ' + currentSlidePosition);
       console.log('Image position: ' + currentImagePosition);
       if (currentSlidePosition <= -1 && currentImagePosition <= -1) {
-        return;
+        currentImagePosition = 0;
+        currentSlidePosition = 0;
       }
       showSlide(slides[currentSlidePosition]);
       showImage(images[currentImagePosition]);
