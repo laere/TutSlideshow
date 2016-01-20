@@ -48,6 +48,11 @@ div {
   display: block;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 //////////HEADER STYLES///////////////////
 header {
@@ -57,23 +62,24 @@ header {
   background-color: #FF1654;
   opacity: .8;
   height: 5em;
-    #logo {
-      font-size: 2.5em;
+  border-bottom: 5px solid #E5134B;
+  #logo {
+    font-size: 2.5em;
+  }
+  .navbar ul li {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 1.45em;
+    &:hover {
+      font-weight: bold;
+      opacity: .9;
     }
-    .navbar ul li {
-      display: inline-block;
-      padding: 0 10px;
-      font-size: 1.25em;
-      &:hover {
-        font-weight: bold;
-        opacity: .9;
-      }
-    }
+  }
 }
 
 //////////CONTAINER STYLES///////////////////
 #container {
-  margin: 13em auto;
+  margin: 6.5em auto;
   background-color: #fff;
   border: 1px solid #777;
   max-width: 60%;
@@ -83,7 +89,6 @@ header {
   .arrow {
     @include arrow;
   }
-
   #leftArrow {
     border-right: 50px solid $light-green;
     float: left;
@@ -143,3 +148,10 @@ header {
 }
 
 //////////FOOTER STYLES///////////////////
+footer {
+  background-color: #FF1654;
+  text-align: center;
+  color: white;
+  padding: 5px 0;
+  border-top: 5px solid #E5134B;
+}

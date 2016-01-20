@@ -543,6 +543,10 @@ body {
 div {
   display: block; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 header {
   display: flex;
   flex-flow: row nowrap;
@@ -552,19 +556,20 @@ header {
   color: #fff;
   background-color: #FF1654;
   opacity: .8;
-  height: 5em; }
+  height: 5em;
+  border-bottom: 5px solid #E5134B; }
   header #logo {
     font-size: 2.5em; }
   header .navbar ul li {
     display: inline-block;
     padding: 0 10px;
-    font-size: 1.25em; }
+    font-size: 1.45em; }
     header .navbar ul li:hover {
       font-weight: bold;
       opacity: .9; }
 
 #container {
-  margin: 13em auto;
+  margin: 6.5em auto;
   background-color: #fff;
   border: 1px solid #777;
   max-width: 60%;
@@ -625,5 +630,11 @@ header {
   100% {
     transform: scale(1.1);
     box-shadow: 1px 1px 6px #777; } }
+footer {
+  background-color: #FF1654;
+  text-align: center;
+  color: white;
+  padding: 5px 0;
+  border-top: 5px solid #E5134B; }
 
 /*# sourceMappingURL=main.css.map */
