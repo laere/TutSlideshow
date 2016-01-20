@@ -6,6 +6,8 @@
 
 //////////VARIABLES/////////////////
 $light-green: #70C1B3;
+$dark-red: #E5134b;
+$light-red: #FF1654;
 
 //////////MIXINS///////////////////
 
@@ -28,6 +30,11 @@ $light-green: #70C1B3;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+@mixin border-radius($radius) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
 }
 //////////BASE STYLES///////////////////
 html {
@@ -60,20 +67,25 @@ header {
   @include flex-row;
   justify-content: space-around;
   color: #fff;
-  background-color: #FF1654;
+  background-color: $light-red;
   opacity: .8;
   height: 5em;
-  border-bottom: 5px solid #E5134B;
+  border-bottom: 5px solid $dark-red;
   #logo {
     font-size: 2.5em;
+    background-color: $dark-red;
+    padding: 0 10px;
+    @include border-radius(10px);
+
   }
   .navbar ul li {
     display: inline-block;
-    padding: 0 10px;
+    padding: 5px 10px;
     font-size: 1.45em;
     &:hover {
       font-weight: bold;
-      opacity: .9;
+      background-color: $dark-red;;
+      @include border-radius(10px);
     }
     a {
       color: white;
@@ -150,13 +162,14 @@ header {
 
 //////////FOOTER STYLES///////////////////
 footer {
-  background-color: #FF1654;
+  background-color: $light-red;
   text-align: center;
   color: white;
   padding: 5px 0;
-  border-top: 5px solid #E5134B;
+  border-top: 5px solid $dark-red;
   font-size: 1.2em;
   position: absolute;
   bottom: 0%;
   width: 100%;
+
 }

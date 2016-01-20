@@ -558,16 +558,22 @@ header {
   background-color: #FF1654;
   opacity: .8;
   height: 5em;
-  border-bottom: 5px solid #E5134B; }
+  border-bottom: 5px solid #E5134b; }
   header #logo {
-    font-size: 2.5em; }
+    font-size: 2.5em;
+    background-color: #E5134b;
+    padding: 0 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
   header .navbar ul li {
     display: inline-block;
-    padding: 0 10px;
+    padding: 5px 10px;
     font-size: 1.45em; }
     header .navbar ul li:hover {
       font-weight: bold;
-      opacity: .9; }
+      background-color: #E5134b;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
     header .navbar ul li a {
       color: white; }
 
@@ -635,7 +641,7 @@ footer {
   text-align: center;
   color: white;
   padding: 5px 0;
-  border-top: 5px solid #E5134B;
+  border-top: 5px solid #E5134b;
   font-size: 1.2em;
   position: absolute;
   bottom: 0%;
