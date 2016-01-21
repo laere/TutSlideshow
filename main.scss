@@ -130,9 +130,7 @@ header {
   margin-top: 20px;
   @media (max-width: 769px) {
     display: block;
-  }
-  #next {
-    float: right;
+    text-align: center;
   }
   #next,
   #back {
@@ -141,6 +139,10 @@ header {
     background-color: #fff;
     color: #3e3e3e;
     border: 2px solid #3e3e3e;
+    @media (max-width: 769px) {
+      width: 40%;
+      margin-bottom: -100px;
+    }
     &:hover {
       background-color: #70C1B3;
       color: #fff;
@@ -162,7 +164,13 @@ header {
     width: 80%;
   }
   @media (max-width: 769px) {
+    margin: 5em auto;
     width: 95%;
+  }
+  @media (max-width: 420px) {
+    width: 98%;
+    height: 480px;
+    margin: 12em auto;
   }
   .arrow {
     @include arrow;
@@ -198,6 +206,9 @@ header {
     position: absolute;
     bottom: 8%;
     left: 15%;
+    @media (max-width: 420px) {
+      font-size: 1em;
+    }
     &::first-letter {
       font-size: 1.5em;
       font-weight: bold;
@@ -255,8 +266,14 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0%;
-  @media (max-width: 769px) {
+  @media (max-width: 1024px) {
     position: relative;
     padding: 2px 0;
+  }
+  @media (max-width: 769px) {
+    position: absolute;
+  }
+  @media (max-width: 420px) {
+    position: relative;;
   }
 }

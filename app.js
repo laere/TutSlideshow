@@ -117,8 +117,10 @@ window.onload = function() {
 
   //attach event listeners to the document and create a conditional.
   document.querySelector('html').addEventListener('click', function(event) {
+    //arrow elements
     var rightArrow = document.querySelector('#rightArrow');
     var leftArrow = document.querySelector('#leftArrow');
+    //button elements
     var next = document.querySelector('#next');
     var back = document.querySelector('#back');
     var el = event.target;

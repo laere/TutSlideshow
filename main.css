@@ -606,9 +606,8 @@ header {
   margin-top: 20px; }
   @media (max-width: 769px) {
     #buttons {
-      display: block; } }
-  #buttons #next {
-    float: right; }
+      display: block;
+      text-align: center; } }
   #buttons #next,
   #buttons #back {
     width: 16%;
@@ -616,6 +615,11 @@ header {
     background-color: #fff;
     color: #3e3e3e;
     border: 2px solid #3e3e3e; }
+    @media (max-width: 769px) {
+      #buttons #next,
+      #buttons #back {
+        width: 40%;
+        margin-bottom: -100px; } }
     #buttons #next:hover,
     #buttons #back:hover {
       background-color: #70C1B3;
@@ -635,7 +639,13 @@ header {
       width: 80%; } }
   @media (max-width: 769px) {
     #container {
+      margin: 5em auto;
       width: 95%; } }
+  @media (max-width: 420px) {
+    #container {
+      width: 98%;
+      height: 480px;
+      margin: 12em auto; } }
   #container .arrow {
     width: 0;
     height: 0;
@@ -682,6 +692,9 @@ header {
     position: absolute;
     bottom: 8%;
     left: 15%; }
+    @media (max-width: 420px) {
+      #container #text {
+        font-size: 1em; } }
     #container #text::first-letter {
       font-size: 1.5em;
       font-weight: bold; }
@@ -726,9 +739,15 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0%; }
-  @media (max-width: 769px) {
+  @media (max-width: 1024px) {
     footer {
       position: relative;
       padding: 2px 0; } }
+  @media (max-width: 769px) {
+    footer {
+      position: absolute; } }
+  @media (max-width: 420px) {
+    footer {
+      position: relative; } }
 
 /*# sourceMappingURL=main.css.map */
