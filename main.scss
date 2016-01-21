@@ -18,12 +18,19 @@ $light-red: #FF1654;
   border-top: 200px solid transparent;
   border-bottom: 200px solid transparent;
   cursor: pointer;
+  @media (max-width: 1024px) {
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+  }
 }
 
 @mixin vertical-center() {
   position: absolute;
   margin-top: -50px;
   top: 20%;
+  @media (max-width: 1024px) {
+    top: 45%;
+  }
 }
 
 @mixin flex-row() {
@@ -71,18 +78,33 @@ header {
   opacity: .8;
   height: 5em;
   border-bottom: 5px solid $dark-red;
-
+  @media (max-width: 1024px) {
+    height: auto;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
   #logo {
     font-size: 2.5em;
     background-color: $dark-red;
     padding: 0 10px;
     @include border-radius(10px);
-
+    @media (max-width: 1024px) {
+      background-color: inherit;;
+      font-size: 2.2em;
+      padding: 0;
+    }
   }
   .navbar ul li {
     display: inline-block;
     padding: 5px 10px;
     font-size: 1.45em;
+    @media (max-width: 1024px) {
+      display: block;
+      font-size: 1.2em;
+      padding: 5px 0;
+      text-align: center;
+    }
     &:hover {
       font-weight: bold;
       background-color: $dark-red;;
@@ -99,10 +121,13 @@ header {
   margin: 6.5em auto;
   background-color: #fff;
   border: 1px solid #777;
-  max-width: 60%;
+  width: 60%;
   height: 500px;
   position: relative;
   box-shadow: 0px 8px 6px -3px #195873;
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
   .arrow {
     @include arrow;
   }
@@ -186,8 +211,9 @@ footer {
   background-color: $light-red;
   text-align: center;
   color: white;
-  padding: 5px 0;
   border-top: 5px solid $dark-red;
-  font-size: 1.2em;
+  font-size: 1em;
   width: 100%;
+  position: absolute;
+  bottom: 0%;
 }

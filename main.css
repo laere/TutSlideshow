@@ -558,16 +558,33 @@ header {
   opacity: .8;
   height: 5em;
   border-bottom: 5px solid #E5134b; }
+  @media (max-width: 1024px) {
+    header {
+      height: auto;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center; } }
   header #logo {
     font-size: 2.5em;
     background-color: #E5134b;
     padding: 0 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; }
+    @media (max-width: 1024px) {
+      header #logo {
+        background-color: inherit;
+        font-size: 2.2em;
+        padding: 0; } }
   header .navbar ul li {
     display: inline-block;
     padding: 5px 10px;
     font-size: 1.45em; }
+    @media (max-width: 1024px) {
+      header .navbar ul li {
+        display: block;
+        font-size: 1.2em;
+        padding: 5px 0;
+        text-align: center; } }
     header .navbar ul li:hover {
       font-weight: bold;
       background-color: #E5134b;
@@ -580,16 +597,23 @@ header {
   margin: 6.5em auto;
   background-color: #fff;
   border: 1px solid #777;
-  max-width: 60%;
+  width: 60%;
   height: 500px;
   position: relative;
   box-shadow: 0px 8px 6px -3px #195873; }
+  @media (max-width: 1024px) {
+    #container {
+      width: 80%; } }
   #container .arrow {
     width: 0;
     height: 0;
     border-top: 200px solid transparent;
     border-bottom: 200px solid transparent;
     cursor: pointer; }
+    @media (max-width: 1024px) {
+      #container .arrow {
+        border-top: 100px solid transparent;
+        border-bottom: 100px solid transparent; } }
   #container #leftArrow {
     border-right: 50px solid #70C1B3;
     float: left;
@@ -598,6 +622,9 @@ header {
     top: 20%;
     right: 105%;
     box-shadow: 6px 0px 6px -4px #5A9B90; }
+    @media (max-width: 1024px) {
+      #container #leftArrow {
+        top: 45%; } }
     #container #leftArrow:hover {
       border-right-color: #64ADA1; }
   #container #rightArrow {
@@ -608,6 +635,9 @@ header {
     top: 20%;
     left: 105%;
     box-shadow: -6px 0px 6px -4px #5A9B90; }
+    @media (max-width: 1024px) {
+      #container #rightArrow {
+        top: 45%; } }
     #container #rightArrow:hover {
       border-left-color: #64ADA1; }
   #container #text {
@@ -656,9 +686,10 @@ footer {
   background-color: #FF1654;
   text-align: center;
   color: white;
-  padding: 5px 0;
   border-top: 5px solid #E5134b;
-  font-size: 1.2em;
-  width: 100%; }
+  font-size: 1em;
+  width: 100%;
+  position: absolute;
+  bottom: 0%; }
 
 /*# sourceMappingURL=main.css.map */
