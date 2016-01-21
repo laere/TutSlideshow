@@ -607,7 +607,11 @@ header {
   @media (max-width: 769px) {
     #buttons {
       display: block;
-      text-align: center; } }
+      text-align: center;
+      margin-bottom: -50px; } }
+  @media (max-width: 420px) {
+    #buttons {
+      margin-bottom: -160px; } }
   #buttons #next,
   #buttons #back {
     width: 16%;
@@ -618,8 +622,8 @@ header {
     @media (max-width: 769px) {
       #buttons #next,
       #buttons #back {
-        width: 40%;
-        margin-bottom: -100px; } }
+        width: 60%;
+        margin: 5px 0; } }
     #buttons #next:hover,
     #buttons #back:hover {
       background-color: #70C1B3;
@@ -749,7 +753,7 @@ footer {
   bottom: 0%; }
   footer p {
     padding: 4px 0;
-    width: 20%;
+    width: 40%;
     background-color: #E5134b;
     margin: 0 auto;
     border-bottom-left-radius: 10px;
