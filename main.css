@@ -538,8 +538,7 @@ html {
 
 body {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  background-color: #247BA0;
-  height: auto; }
+  background-color: #247BA0; }
 
 div {
   display: block; }
@@ -578,7 +577,7 @@ header {
       color: white; }
 
 #container {
-  margin: 8em auto;
+  margin: 6.5em auto;
   background-color: #fff;
   border: 1px solid #777;
   max-width: 60%;
@@ -640,12 +639,18 @@ header {
   width: 60%;
   display: flex;
   justify-content: center;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background-color: yellow;
+  width: 60%;
+  height: auto; }
+  @media (max-width: 1024px) {
+    #orbs {
+      display: none; } }
   #orbs div {
     border: 1px solid black;
     text-align: center;
     cursor: pointer;
-    margin: -100px 5px; }
+    margin: -55px 5px; }
 
 footer {
   background-color: #FF1654;
@@ -654,8 +659,6 @@ footer {
   padding: 5px 0;
   border-top: 5px solid #E5134b;
   font-size: 1.2em;
-  position: absolute;
-  bottom: 0%;
   width: 100%; }
 
 /*# sourceMappingURL=main.css.map */

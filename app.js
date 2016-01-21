@@ -105,7 +105,7 @@ window.onload = function() {
     var orbs = document.querySelector('#orbs'),
         //textNode = document.createTextNode(),
         element = document.createElement(ele);
-        
+
     element.style.height = height;
     element.style.width = width;
     element.style.backgroundColor = color;
