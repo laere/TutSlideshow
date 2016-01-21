@@ -718,17 +718,25 @@ header {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  background-color: yellow;
   width: 60%;
   height: auto; }
   @media (max-width: 1024px) {
     #orbs {
       display: none; } }
-  #orbs div {
+  #orbs .orb {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    display: inline-block;
+    background-color: #fff;
     border: 1px solid black;
     text-align: center;
     cursor: pointer;
     margin: -55px 5px; }
+  #orbs .select {
+    background-color: #70C1B3;
+    color: #fff;
+    border-color: #fff; }
 
 footer {
   background-color: #FF1654;
@@ -739,10 +747,16 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0%; }
+  footer p {
+    padding: 4px 0;
+    width: 20%;
+    background-color: #E5134b;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
   @media (max-width: 1024px) {
     footer {
-      position: relative;
-      padding: 2px 0; } }
+      position: relative; } }
   @media (max-width: 769px) {
     footer {
       position: absolute; } }

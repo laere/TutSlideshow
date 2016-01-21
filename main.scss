@@ -2,48 +2,9 @@
 @import 'bourbon/bourbon';
 @import 'base/base';
 @import '_normalize';
+@import '_mixins';
 
 
-
-//////////VARIABLES/////////////////
-$light-green: #70C1B3;
-$dark-red: #E5134b;
-$light-red: #FF1654;
-
-//////////MIXINS///////////////////
-
-@mixin arrow() {
-  width: 0;
-  height: 0;
-  border-top: 200px solid transparent;
-  border-bottom: 200px solid transparent;
-  cursor: pointer;
-  @media (max-width: 1024px) {
-    border-top: 100px solid transparent;
-    border-bottom: 100px solid transparent;
-  }
-}
-
-@mixin vertical-center() {
-  position: absolute;
-  margin-top: -50px;
-  top: 20%;
-  @media (max-width: 1024px) {
-    top: 45%;
-  }
-}
-
-@mixin flex-row() {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-@mixin border-radius($radius) {
-  border-top-left-radius: $radius;
-  border-top-right-radius: $radius;
-}
 //////////BASE STYLES///////////////////
 html {
   box-sizing: border-box;
@@ -144,9 +105,7 @@ header {
       margin-bottom: -100px;
     }
     &:hover {
-      background-color: #70C1B3;
-      color: #fff;
-      border-color: #fff;
+      @include green-hover;
     }
   }
 }
@@ -242,17 +201,27 @@ header {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  background-color: yellow;
   width: 60%;
   height: auto;
   @media (max-width: 1024px) {
     display: none;
   }
-  div {
+  .orb {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    display: inline-block;
+    background-color: #fff;
     border: 1px solid black;
     text-align: center;
     cursor: pointer;
     margin: -55px 5px;
+    // &:hover {
+    //   @include green-hover;
+    // }
+  }
+  .select {
+    @include green-hover;
   }
 }
 
@@ -266,9 +235,16 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0%;
+  p {
+    padding: 4px 0;
+    width: 20%;
+    background-color: $dark-red;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
   @media (max-width: 1024px) {
     position: relative;
-    padding: 2px 0;
   }
   @media (max-width: 769px) {
     position: absolute;
@@ -277,3 +253,5 @@ footer {
     position: relative;;
   }
 }
+
+//////////JS CLASS///////////////////

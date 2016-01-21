@@ -1,0 +1,45 @@
+//////////VARIABLES/////////////////
+$light-green: #70C1B3;
+$dark-red: #E5134b;
+$light-red: #FF1654;
+
+//////////MIXINS///////////////////
+
+@mixin arrow() {
+  width: 0;
+  height: 0;
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid transparent;
+  cursor: pointer;
+  @media (max-width: 1024px) {
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+  }
+}
+
+@mixin vertical-center() {
+  position: absolute;
+  margin-top: -50px;
+  top: 20%;
+  @media (max-width: 1024px) {
+    top: 45%;
+  }
+}
+
+@mixin flex-row() {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@mixin border-radius($radius) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin green-hover() {
+  background-color: #70C1B3;
+  color: #fff;
+  border-color: #fff;
+}

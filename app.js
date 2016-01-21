@@ -35,10 +35,6 @@ window.onload = function() {
 
   addFirstSlide();
   addFirstImage();
-  //for each item in the array create and Orb
-  slides.forEach(function(func) {
-    createOrbs('div', '50px', '50px', '#fff', '30px', 'inline-block');
-  });
   //add first slide
   function addFirstSlide() {
     slideText.innerHTML = slides[0];
@@ -70,8 +66,8 @@ window.onload = function() {
       currentSlidePosition++;
       currentImagePosition++;
       if (currentImagePosition >= slides.length  && currentImagePosition >= images.length) {
-        currentImagePosition = 8;
-        currentSlidePosition = 8;
+        currentImagePosition = 0;
+        currentSlidePosition = 0;
       }
       showSlide(slides[currentSlidePosition]);
       showImage(images[currentImagePosition]);
@@ -91,8 +87,8 @@ window.onload = function() {
       console.log('Slide position: ' + currentSlidePosition);
       console.log('Image position: ' + currentImagePosition);
       if (currentSlidePosition <= -1 && currentImagePosition <= -1) {
-        currentImagePosition = 0;
-        currentSlidePosition = 0;
+        currentImagePosition = 8;
+        currentSlidePosition = 8;
       }
       showSlide(slides[currentSlidePosition]);
       showImage(images[currentImagePosition]);
@@ -100,20 +96,30 @@ window.onload = function() {
       console.log('Image position: ' + currentImagePosition);
     }
   }
+  //when orb is clicked
+    //if previous sibling or next sibling of clicked orb has class select, remove select
+      //then add select class to click targetted orb.
+//when right arrow is clicked
 
-  function createOrbs(ele, height, width, color, radius, display) {
-    var orbs = document.querySelector('#orbs'),
-        //textNode = document.createTextNode(),
-        element = document.createElement(ele);
-
-    element.style.height = height;
-    element.style.width = width;
-    element.style.backgroundColor = color;
-    element.style.borderRadius = radius;
-    element.style.display = display;
-    //element.appendChild(textNode);
-    orbs.appendChild(element);
+function orbTravelRight() {
+  var $currentOrb = $('div.orb.select');
+  var $nextOrb = $currentOrb.next();
+  if($currentOrb.is(':last-child')) {
+    $nextOrb = $('div.orb:first');
   }
+  $currentOrb.removeClass('select');
+  $nextOrb.addClass('select');
+}
+
+function orbTravelLeft() {
+  var $currentOrb = $('div.orb.select');
+  var $prevOrb = $currentOrb.prev();
+  if($currentOrb.is(':first-child')) {
+    $prevOrb = $('div.orb:last');
+  }
+  $currentOrb.removeClass('select');
+  $prevOrb.addClass('select');
+}
 
   //attach event listeners to the document and create a conditional.
   document.querySelector('html').addEventListener('click', function(event) {
@@ -128,10 +134,12 @@ window.onload = function() {
     if (el === rightArrow || el === next) {
       console.log('right arrow!');
       clickToNextSlide();
+      orbTravelRight();
       //else if left arrow is clicked
     } else if (el === leftArrow || el === back) {
       console.log('left arrow');
       clickToPreviousSlide();
+      orbTravelLeft();
     } else {
       // do nothing
       event.stopPropagation();
