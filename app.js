@@ -119,13 +119,15 @@ window.onload = function() {
   document.querySelector('html').addEventListener('click', function(event) {
     var rightArrow = document.querySelector('#rightArrow');
     var leftArrow = document.querySelector('#leftArrow');
+    var next = document.querySelector('#next');
+    var back = document.querySelector('#back');
     var el = event.target;
     //if right arrow is clicked
-    if (el === rightArrow) {
+    if (el === rightArrow || el === next) {
       console.log('right arrow!');
       clickToNextSlide();
       //else if left arrow is clicked
-    } else if (el === leftArrow) {
+    } else if (el === leftArrow || el === back) {
       console.log('left arrow');
       clickToPreviousSlide();
     } else {

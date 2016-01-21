@@ -590,20 +590,52 @@ header {
       background-color: #E5134b;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px; }
+      @media (max-width: 1024px) {
+        header .navbar ul li:hover {
+          background-color: inherit; } }
     header .navbar ul li a {
       color: white; }
+
+#buttons {
+  width: 95%;
+  height: auto;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -80px;
+  margin-top: 20px; }
+  @media (max-width: 769px) {
+    #buttons {
+      display: block; } }
+  #buttons #next {
+    float: right; }
+  #buttons #next,
+  #buttons #back {
+    width: 16%;
+    height: 3em;
+    background-color: #fff;
+    color: #3e3e3e;
+    border: 2px solid #3e3e3e; }
+    #buttons #next:hover,
+    #buttons #back:hover {
+      background-color: #70C1B3;
+      color: #fff;
+      border-color: #fff; }
 
 #container {
   margin: 6.5em auto;
   background-color: #fff;
   border: 1px solid #777;
   width: 60%;
-  height: 500px;
+  height: 550px;
   position: relative;
   box-shadow: 0px 8px 6px -3px #195873; }
   @media (max-width: 1024px) {
     #container {
       width: 80%; } }
+  @media (max-width: 769px) {
+    #container {
+      width: 95%; } }
   #container .arrow {
     width: 0;
     height: 0;
@@ -614,6 +646,9 @@ header {
       #container .arrow {
         border-top: 100px solid transparent;
         border-bottom: 100px solid transparent; } }
+    @media (max-width: 769px) {
+      #container .arrow {
+        display: none; } }
   #container #leftArrow {
     border-right: 50px solid #70C1B3;
     float: left;
@@ -691,5 +726,9 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0%; }
+  @media (max-width: 769px) {
+    footer {
+      position: relative;
+      padding: 2px 0; } }
 
 /*# sourceMappingURL=main.css.map */
