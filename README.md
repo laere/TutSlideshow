@@ -18,3 +18,7 @@ Get image sliding working. **DONE**
 Add header and footer to fill the page. **DONE**
 
 Add Media Queries **DONE**
+<<<<<<< HEAD
+=======
+
+>>>>>>> 68267da6e27ee00423b98fd03a8973eb61152938
