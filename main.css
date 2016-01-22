@@ -760,12 +760,7 @@ footer {
     border-bottom-right-radius: 10px; }
   @media (max-width: 1024px) {
     footer {
-      position: relative; } }
-  @media (max-width: 769px) {
-    footer {
-      position: absolute; } }
-  @media (max-width: 420px) {
-    footer {
-      position: relative; } }
+      position: relative;
+      bottom: 0%; } }
 
 /*# sourceMappingURL=main.css.map */

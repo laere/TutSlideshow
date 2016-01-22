@@ -249,13 +249,16 @@ footer {
   }
   @media (max-width: 1024px) {
     position: relative;
+    bottom: 0%;
   }
-  @media (max-width: 769px) {
-    position: absolute;
-  }
-  @media (max-width: 420px) {
-    position: relative;;
-  }
+  // @media (max-width: 769px) {
+  //   position: relative;
+  //   bottom: 0%;
+  // }
+  // @media (max-width: 420px) {
+  //   position: relative;
+  //   bottom: 0%;
+  // }
 }
 
 //////////JS CLASS///////////////////
